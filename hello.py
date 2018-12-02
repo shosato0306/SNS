@@ -3,6 +3,7 @@ from flask_bootstrap import Bootstrap
 from flask_moment import Moment
 from flask_wtf import FlaskForm
 from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
 
@@ -20,6 +21,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIOND'] = False
 db = SQLAlchemy(app)
 bootstrap = Bootstrap(app)
 moment = Moment(app)
+migrate = Migrate(app, db)
 
 class NameForm(FlaskForm):
     name = StringField('What is your name?', validators=[DataRequired()])
@@ -52,13 +54,15 @@ def index():
         # if old_name is not None and old_name != form.name.data:
         #     flash('Looks like you have changed your name!')
         # session['name']=form.name.data
-        if user in None:
+        if user is None:
             user = User(username=form.name.data)
             db.session.add(user)
             db.session.commit()
             session['known'] = False
+            flash('User registration to database is succeeded')
         else: 
             session['known'] = True
+            flash('Your name is already registerd')
         session['name'] = form.name.data
         form.name.data = ""
         return redirect(url_for('index'))
