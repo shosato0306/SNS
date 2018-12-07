@@ -1,9 +1,10 @@
-from datatime import datatime
-from flask import render_template, session, redirect, url_for
-from .import main
+from datetime import datetime
+from flask import render_template, session, redirect, url_for, \
+                current_app, flash
+from . import main
 from .forms import NameForm
 from ..import db
-from ..models imoport User
+from ..models import User
 
 
 @main.route('/', methods=['GET', 'POST'])
@@ -16,8 +17,8 @@ def index():
             db.session.add(user)
             db.session.commit()
             session['known'] = False
-            if app.config['FLASKY_ADMIN']:
-                send_email(app.config['FLASKY_ADMIN'], 'NEW USER',
+            if current_app.config['FLASKY_ADMIN']:
+                send_email(current_app.config['FLASKY_ADMIN'], 'NEW USER',
                     'mail/new_user', user=user)
             flash('User registration to database is succeeded')
         else: 
