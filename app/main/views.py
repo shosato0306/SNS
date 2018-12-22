@@ -26,34 +26,6 @@ def index():
     posts = pagination.items
     return render_template('index.html', form=form, posts=posts, pagination=pagination)
         
-
-
-# @main.route('/', methods=['GET', 'POST'])
-# def index():
-#     form = NameForm()
-#     if form.validate_on_submit():
-#         user = User.query.filter_by(username=form.name.data).first()
-#         if user is None:
-#             user = User(username=form.name.data)
-#             db.session.add(user)
-#             db.session.commit()
-#             session['known'] = False
-#             if current_app.config['FLASKY_ADMIN']:
-#                 send_email(current_app.config['FLASKY_ADMIN'], 'NEW USER',
-#                     'mail/new_user', user=user)
-#             flash('User registration to database is succeeded')
-#         else: 
-#             session['known'] = True
-#             flash('Your name is already registerd')
-#         session['name'] = form.name.data
-#         form.name.data = ""
-#         return redirect(url_for('.index'))
-#     return render_template('index.html',
-#                             form=form, 
-#                             name=session.get('name'),
-#                             known=session.get('known', False),
-#                             current_time=datetime.utcnow())
-
 @main.route('/user/<username>')    
 def user(username):
     user = User.query.filter_by(username=username).first()
@@ -106,3 +78,7 @@ def edit_profile_admin(id):
     form.about_me.data = user.about_me
     return render_template('edit_profile.html', form=form, user=user)
 
+@main.route('/post/<int:id>')
+def post(id):
+    post = Post.query.get_or_404(id)
+    return render_template('post.html', posts=[post])
