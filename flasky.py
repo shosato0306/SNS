@@ -10,7 +10,7 @@ migrate = Migrate(app, db)
 def make_shell_context():
     """flask The shell command invokes this function
     with a shell_context_processor decorator every time it starts up""" 
-    print("flasky.make_shell_context")
+    print("SNS.make_shell_context")
     return dict(db=db, User=User, Follow=Follow,
                 Role=Role, Permission=Permission, Post=Post, Comment=Comment)
 

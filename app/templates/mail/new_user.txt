@@ -1,1 +1,1 @@
-Hello {{ user.username }}. This mail is from Flasky
+Hello {{ user.username }}. This mail is from SNS
