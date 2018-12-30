@@ -203,9 +203,9 @@ class User(UserMixin, db.Model):
             url = 'http://www.gravatar.com/avatar'
         hash = self.avatar_hash or self.gravatar_hash()
         url = 'https://secure.gravatar.com/avatar'
-        print('{url}/{hash}?s={size}&d={default}&r={rating}'.format(
-            url=url, hash=hash, size=size, default=default, rating=rating
-            ))
+        # print('{url}/{hash}?s={size}&d={default}&r={rating}'.format(
+        #     url=url, hash=hash, size=size, default=default, rating=rating
+        #     ))
         return '{url}/{hash}?s={size}&d={default}&r={rating}'.format(
             url=url, hash=hash, size=size, default=default, rating=rating
             )
