@@ -14,9 +14,11 @@ class Config:
     SNS_MAIL_SENDER = 'SNS Admin <example@gmail.com>'
     SNS_ADMIN = os.environ.get('SNS_ADMIN')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    SQLALCHEMY_RECORD_QUERIES = True
     SNS_POSTS_PER_PAGE = 20
     SNS_FOLLOWERS_PER_PAGE = 50
     SNS_COMMENTS_PER_PAGE = 30
+    SNS_SLOW_DB_QUERY_TIME = 0.5
 
 
     @staticmethod
