@@ -1,1 +1,1 @@
-# SNS-Flask
+# SNS
