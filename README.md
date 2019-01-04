@@ -5,7 +5,7 @@ For example, this service includes the following functions.
 
 ## Dependency
 
-Please refer to requirement.txt for dependencies necessary to activate SNS.
+Please refer to requirements/common.txt for dependencies necessary to activate SNS.
 
 ## Setup
 
