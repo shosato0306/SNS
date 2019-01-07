@@ -14,7 +14,8 @@ Please add additional functions if necessary.
 	* Pagination is supported
 	* Other users can post comments on posted blogs
 * User management function
-![sns_-_login](https://user-images.githubusercontent.com/38198918/50765868-9be1e300-12ba-11e9-9358-3ce54567fea3.png)
+![image](https://user-images.githubusercontent.com/38198918/50777412-e07f7580-12de-11e9-8f89-52968b72499b.png)
+
 	* User creation
 	* User authentication 
 	* Email confirmation
