@@ -8,10 +8,13 @@ In this *SNS*, the following functions are implemented by default.
 Please add additional functions if necessary.
 
 * Blog post & display function
+![sns](https://user-images.githubusercontent.com/38198918/50765746-3a217900-12ba-11e9-8dde-54c4e9e93611.png)
+
 	* You can use the Markdown language
 	* Pagination is supported
 	* Other users can post comments on posted blogs
 * User management function
+![sns_-_login](https://user-images.githubusercontent.com/38198918/50765868-9be1e300-12ba-11e9-9358-3ce54567fea3.png)
 	* User creation
 	* User authentication 
 	* Email confirmation
