@@ -20,10 +20,13 @@ Please add additional functions if necessary.
 	* Email confirmation
 * User Role Management
 	* User
+		* Basic permissions to write articles and comments and this other users.
 	* Moderator
+		* Adds permission to moderate comments made by other users.
 	* Administrator
-* User follow function
+		* Full access, which includes permission to change the roles of other users.
 
+* User follow function
 * REST API
 
 ## Dependency
