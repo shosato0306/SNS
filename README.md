@@ -2,6 +2,8 @@
 
 This is a service that provides basic functions of SNS.  
 
+## Environment
+
 ## Functions
 
 In this *SNS*, the following functions are implemented by default.  
@@ -55,6 +57,8 @@ $flask run
 ```
 
 ## Usage
+
+## Note
 
 ## Contribution
 1. Fork this repository
