@@ -47,3 +47,4 @@ venv
 data.sqlite
 tmp/*
 .env
+migrations/*
