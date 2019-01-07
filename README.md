@@ -35,6 +35,24 @@ Please refer to requirements/common.txt for dependencies necessary to activate S
 
 ## Setup
 
+```
+$git clone https://github.com/shosato0306/SNS.git
+$cd SNS
+$pip install -r requirements/dev.txt
+$flask db init
+$flask db migrate
+$flask db upgrade
+$flask shell
+>>> Role.insert_roles()
+>>> Role.query.all()
+>>> exit()
+$export FLASK_APP=sns.py
+$export SNS_ADMIN=<Administrator's email address>
+$export MAIL_USERNAME=<Mail account username>
+$export MAIL_PASSWORD=<Mail account password>
+$flask run
+```
+
 ## Usage
 
 ## Contribution
