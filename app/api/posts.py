@@ -8,7 +8,6 @@ from .errors import forbidden
 
 @api.route('/posts')
 def get_posts():
-    print("here")
     page = request.args.get('page', 1, type=int)
     pagination = Post.query.paginate(
         page, per_page=current_app.config['SNS_POSTS_PER_PAGE'],
