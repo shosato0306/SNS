@@ -1,7 +1,27 @@
 # SNS  
 
 This is a service that provides basic functions of SNS.  
-For example, this service includes the following functions.
+
+## Functions
+
+In this *SNS*, the following functions are implemented by default.  
+Please add additional functions if necessary.
+
+* Blog post & display function
+	* You can use the Markdown language
+	* Pagination is supported
+	* Other users can post comments on posted blogs
+* User management function
+	* User creation
+	* User authentication 
+	* Email confirmation
+* User Role Management
+	* User
+	* Moderator
+	* Administrator
+* User follow function
+
+* REST API
 
 ## Dependency
 
