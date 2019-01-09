@@ -59,6 +59,7 @@ $flask run
 
 ## Note
 
+* If you create an account for a user with the email address you set in SNS_ADMIN, that user will be assigned the Administrator Role.
 * *SNS* uses [*gravatar*](https://ja.gravatar.com) to display avatar images
 * This service does not yet support OAuth 2.0. Therefore, there is a limit to the use of gmail which requires OAuth 2.0 when confirming email address.
 OAuth 2.0 will be implemented in the future.
